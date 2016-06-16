@@ -17,6 +17,8 @@
 		6450C42D1CCF0C1D00672E63 /* ReactiveCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450C42C1CCF0C1D00672E63 /* ReactiveCocoaTests.m */; };
 		6450C4381CCF0C1D00672E63 /* ReactiveCocoaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450C4371CCF0C1D00672E63 /* ReactiveCocoaUITests.m */; };
 		6450C4471CCF673500672E63 /* RWDummySignInService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6450C4461CCF673500672E63 /* RWDummySignInService.m */; };
+		645E62D11D12716200E36B89 /* RenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 645E62D01D12716200E36B89 /* RenderManager.m */; };
+		645E62F11D12C53C00E36B89 /* PromiseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 645E62F01D12C53C00E36B89 /* PromiseTest.swift */; };
 		646800C61D11588B00A5EAB6 /* NetWorkingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 646800C51D11588B00A5EAB6 /* NetWorkingModel.m */; };
 		E78E64D186CB3432C238FB92 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 553C0A21D63494C0143C45FE /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -60,6 +62,10 @@
 		6450C4391CCF0C1D00672E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6450C4451CCF673500672E63 /* RWDummySignInService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RWDummySignInService.h; sourceTree = "<group>"; };
 		6450C4461CCF673500672E63 /* RWDummySignInService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RWDummySignInService.m; sourceTree = "<group>"; };
+		645E62CF1D12716100E36B89 /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderManager.h; sourceTree = "<group>"; };
+		645E62D01D12716200E36B89 /* RenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RenderManager.m; sourceTree = "<group>"; };
+		645E62EF1D12C53B00E36B89 /* ReactiveCocoa-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactiveCocoa-Bridging-Header.h"; sourceTree = "<group>"; };
+		645E62F01D12C53C00E36B89 /* PromiseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromiseTest.swift; sourceTree = "<group>"; };
 		646800C41D11588B00A5EAB6 /* NetWorkingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetWorkingModel.h; sourceTree = "<group>"; };
 		646800C51D11588B00A5EAB6 /* NetWorkingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetWorkingModel.m; sourceTree = "<group>"; };
 		A8A58FA830017D37AABB0109 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,8 +127,11 @@
 				6450C4161CCF0C1D00672E63 /* AppDelegate.m */,
 				6450C4181CCF0C1D00672E63 /* ViewController.h */,
 				6450C4191CCF0C1D00672E63 /* ViewController.m */,
+				645E62F01D12C53C00E36B89 /* PromiseTest.swift */,
 				58584A451D10565200AC7FEA /* SecondViewController.h */,
 				58584A461D10565200AC7FEA /* SecondViewController.m */,
+				645E62CF1D12716100E36B89 /* RenderManager.h */,
+				645E62D01D12716200E36B89 /* RenderManager.m */,
 				646800C41D11588B00A5EAB6 /* NetWorkingModel.h */,
 				646800C51D11588B00A5EAB6 /* NetWorkingModel.m */,
 				6450C4451CCF673500672E63 /* RWDummySignInService.h */,
@@ -132,6 +141,7 @@
 				6450C4201CCF0C1D00672E63 /* LaunchScreen.storyboard */,
 				6450C4231CCF0C1D00672E63 /* Info.plist */,
 				6450C4121CCF0C1D00672E63 /* Supporting Files */,
+				645E62EF1D12C53B00E36B89 /* ReactiveCocoa-Bridging-Header.h */,
 			);
 			path = ReactiveCocoa;
 			sourceTree = "<group>";
@@ -363,6 +373,8 @@
 				58584A471D10565200AC7FEA /* SecondViewController.m in Sources */,
 				6450C41A1CCF0C1D00672E63 /* ViewController.m in Sources */,
 				6450C4171CCF0C1D00672E63 /* AppDelegate.m in Sources */,
+				645E62F11D12C53C00E36B89 /* PromiseTest.swift in Sources */,
+				645E62D11D12716200E36B89 /* RenderManager.m in Sources */,
 				6450C4141CCF0C1D00672E63 /* main.m in Sources */,
 				6450C4471CCF673500672E63 /* RWDummySignInService.m in Sources */,
 				646800C61D11588B00A5EAB6 /* NetWorkingModel.m in Sources */,
@@ -506,11 +518,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = ReactiveCocoa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanlian.ReactiveCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactiveCocoa/ReactiveCocoa-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -521,11 +535,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = ReactiveCocoa/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wanlian.ReactiveCocoa;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactiveCocoa/ReactiveCocoa-Bridging-Header.h";
 			};
 			name = Release;
 		};
